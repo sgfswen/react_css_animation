@@ -46,6 +46,29 @@ class AnimationShoppingList extends Component {
       </div>
     ));
 
+/*
+애니메이션을 적용하려는 자식요소는 ReactCSSTransitionGroup 요소로 래핑해야 한다.
+
+ReactCSSTransitionGroup props
+	transitionName ( 실제 애니메이션 정의를 포함하는 CSS 클래스 이름으로 매핑된다 )
+	transitionEnterTimeout, transitionLeaveTimeout ( 밀리초 단위 지속 시간)
+
+	enter >
+	이벤트가 발생하면 example-enter 추가 하고 항목 렌더링 함.
+	이후 example-enter-active className 추가 됨.
+	이후 지정한 시간 지나면 사라짐.
+
+	leave >
+	이벤트가 발생하면 example-leave 추가 하고 항목 렌더링 함.
+	이후 example-leave-active className 추가 되고 항목은 시간 이후 제거 됨..
+	이후 지정한 시간 지나면 사라짐.
+
+	초기 마운팅 애니메이션 appear >
+	기본값은 false
+	초기 마운팅 될 때 애니메이션 적용.
+
+*/
+
     return (
       <div>
         <ReactCSSTransitionGroup
